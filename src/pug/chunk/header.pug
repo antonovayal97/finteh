@@ -1,0 +1,25 @@
+header.header
+    .c-container
+        .header__block
+            a(href="#").header__logo
+                img(src="./img/logo.svg", alt="логотип")
+            nav.header__menu
+                ul
+                    li.header__menu-dropdown
+                        a(href="#").header__menu-dropdown-outer
+                            span Услуги
+                            +icon("dropdown-arrow")
+                        .header__menu-dropdown-inner
+                            span span
+                    li
+                        a(href="#") О компании
+                    li
+                        a(href="#") Спецпредложения
+                    li
+                        a(href="#") Клиентам
+                    li
+                        a(href="#") Контакты
+            .header__email
+                a(href="mailto: client@fintech-leasing.ru") client@fintech-leasing.ru
+            .header__button
+                a(href="#").button Заказать звонок 

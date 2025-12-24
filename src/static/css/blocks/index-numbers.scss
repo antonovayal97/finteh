@@ -1,0 +1,51 @@
+.index-numbers {
+  background-color: #f4f8ff;
+  border-top: 1px solid #d9d9d9;
+  padding-top: 5.15rem;
+  &__title {
+    margin-bottom: 3.4375rem;
+    h2 {
+      font-weight: 500;
+      font-size: 2.25rem;
+      letter-spacing: -0.04em;
+    }
+  }
+  &__cards {
+    display: flex;
+    gap: 5rem;
+    margin-left: -0.125rem;
+  }
+  &__card {
+    padding-left: 1.5rem;
+    border-left: 1px solid #1cb4ff;
+    height: 17.625rem;
+    &-value {
+      line-height: 0;
+      margin-bottom: 0.0625rem;
+    }
+    &-title {
+      font-weight: 700;
+      font-size: 2rem;
+      letter-spacing: -0.05em;
+      margin-bottom: 0.0625rem;
+    }
+    &-desc {
+      font-weight: 500;
+      font-size: 1.25rem;
+      line-height: 1.7rem;
+    }
+
+    &--1 {
+      width: 26.1875rem;
+    }
+    &--2 {
+      width: 21.0625rem;
+    }
+    &--3 {
+      width: 20rem;
+    }
+    &--4 {
+      width: 25rem;
+    }
+  }
+}

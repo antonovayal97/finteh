@@ -1,0 +1,23 @@
+extends ../layout/app
+block title
+  | Главная
+block styles
+  link(rel="stylesheet", href="./css/blocks/index-banner.min.css")
+  link(rel="stylesheet", href="./css/blocks/index-leasing.min.css")
+  link(rel="stylesheet", href="./css/blocks/index-advantages.min.css")
+  link(rel="stylesheet", href="./css/blocks/index-numbers.min.css")
+  link(rel="stylesheet", href="./css/blocks/index-process.min.css")
+  link(rel="stylesheet", href="./css/blocks/index-faq.min.css")
+  link(rel="stylesheet", href="./css/blocks/index-news.min.css")
+block script
+block page
+  include ../chunk/header
+  main
+    include ../blocks/index-banner
+    include ../blocks/index-leasing
+    include ../blocks/index-advantages
+    include ../blocks/index-numbers
+    include ../blocks/index-process
+    include ../blocks/index-faq
+    include ../blocks/index-news
+  include ../chunk/footer

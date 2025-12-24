@@ -1,0 +1,60 @@
+.index-leasing.c-container
+    .index-leasing__cards
+        .index-leasing__card
+            .index-leasing__card-name
+                span Лизинг <div class="c-accient">автомобилей</div>
+            .index-leasing__card-tags
+                .index-leasing__card-tag легковые авто
+                .index-leasing__card-tag грузовые авто
+                .index-leasing__card-tag коммерческий транспорт
+            .index-leasing__card-image
+                img(src="./img/leasing__card-image-1.webp", alt="leasing__card-image")
+        .index-leasing__card
+            .index-leasing__card-name
+                span Лизинг <div class="c-accient">оборудования</div>
+            .index-leasing__card-tags
+                .index-leasing__card-tag медицинское
+                .index-leasing__card-tag производственное
+                .index-leasing__card-tag IT-оборудование
+            .index-leasing__card-image
+                img(src="./img/leasing__card-image-2.webp", alt="leasing__card-image")
+        .index-leasing__card
+            .index-leasing__card-name
+                span Лизинг <div class="c-accient">спецтехники</div>
+            .index-leasing__card-tags
+                .index-leasing__card-tag cтроительная техника
+                .index-leasing__card-tag cельхозтехника
+                .index-leasing__card-tag логистика
+            .index-leasing__card-image
+                img(src="./img/leasing__card-image-3.webp", alt="leasing__card-image")
+        .index-leasing__card
+            .index-leasing__card-name
+                span Лизинг <div class="c-accient">недвижимости</div>
+            .index-leasing__card-tags
+                .index-leasing__card-tag производственная
+                .index-leasing__card-tag коммерческая
+            .index-leasing__card-image
+                img(src="./img/leasing__card-image-4.webp", alt="leasing__card-image")
+    .index-leasing__form
+        .index-leasing__form-title
+            span Помощь клиентам
+        .index-leasing__form-description
+            span Не можете определить направление услуги или не хотите тратить время — просто оставьте заявку и наши специалисты свяжутся с вами
+        form.index-leasing__form-form
+            .index-leasing__form-form-inputs
+                input(type="text", placeholder="Телефон")
+                input(type="text", placeholder="Ваше имя")
+            .c-check-confirm
+                label.c-checkbox-wrap
+                    input(type="checkbox", name="")
+                    span.c-checkbox
+                        +icon("c-check", "c-checkbox-icon")
+                .c-check-confirm-text
+                    span Я даю согласие на обработку
+                    a(href="#") персональных данных
+                    span и соглашаюсь
+                    a(href="#") с Политикой конфиденциальности
+            .index-leasing__form-form__button
+                button(type="sumnit").button Заказать звонок
+        .index-leasing__form-form-bg
+            img(src="./img/leasing__form-form-bg.svg", alt="")
