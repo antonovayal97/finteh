@@ -1,15 +1,34 @@
+@import "../service/media-mixin.scss";
+
 .index-faq {
   display: flex;
   justify-content: space-between;
   padding-top: 4.5625rem;
   padding-bottom: 3.0625rem;
+  @include max-lg {
+    flex-direction: column;
+    gap: 2.5rem;
+    padding-top: 3.65rem;
+    padding-bottom: 3.7rem;
+  }
   &__title {
     width: 34.875rem;
     margin-left: -0.3rem;
+    @include max-lg {
+      width: 100%;
+      margin-left: 0;
+    }
     h2 {
       font-weight: 500;
       font-size: 2.25rem;
       line-height: 3.3075rem;
+      position: sticky;
+      top: 10rem;
+      @include max-lg {
+        font-size: 1.5rem;
+        line-height: 1.695rem;
+        letter-spacing: -0.04em;
+      }
     }
   }
   &__items {
@@ -18,13 +37,23 @@
     display: flex;
     flex-direction: column;
     gap: 1.75rem;
+    @include max-lg {
+      width: 100%;
+      gap: 1.4rem;
+    }
   }
   &__item {
     padding-bottom: 1.8125rem;
     border-bottom: 0.0625rem solid #d9d9d9;
+    @include max-lg {
+      padding-bottom: 0.93rem;
+    }
     &--active {
       border-bottom: 0.0625rem solid #1cb4ff;
       padding-bottom: 1.25rem;
+      .index-faq__item-outer {
+        align-items: center;
+      }
       .index-faq__item-inner {
         display: block;
       }
@@ -35,7 +64,7 @@
     &-outer {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-start;
       gap: 3rem;
       cursor: pointer;
     }
@@ -45,12 +74,21 @@
       line-height: 1.2rem;
       font-weight: 400;
       font-size: 1rem;
+      @include max-lg {
+        font-size: 0.875rem;
+        line-height: 1.066rem;
+      }
     }
     &-title {
       font-weight: 500;
       font-size: 1.5rem;
       line-height: 1.8125rem;
       letter-spacing: -0.04em;
+      @include max-lg {
+        font-size: 1.125rem;
+        letter-spacing: -0.04em;
+        line-height: 1.4rem;
+      }
     }
     &-arrow {
       padding: 0.6875rem;

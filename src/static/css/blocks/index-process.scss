@@ -1,7 +1,14 @@
+@import "../service/media-mixin.scss";
+
 .index-process {
   display: flex;
   gap: 1.4rem;
   padding-top: 6.25rem;
+  @include max-lg {
+    flex-direction: column;
+    padding-top: 3.8rem;
+    gap: 0.75rem;
+  }
   &__leasing {
     width: 50%;
     background: #383838;
@@ -9,11 +16,22 @@
     padding-bottom: 4.75rem;
     border-radius: 0.75rem;
     margin-left: -0.4rem;
+    @include max-lg {
+      width: 100%;
+      padding: 1.25rem;
+      padding-top: 1.875rem;
+      margin-left: 0;
+    }
     &-title {
       display: flex;
       justify-content: space-between;
       align-self: flex-start;
       margin-bottom: 4.4375rem;
+      @include max-lg {
+        flex-direction: column;
+        gap: 1.875rem;
+        margin-bottom: 1.8rem;
+      }
       h2 {
         font-weight: 500;
         font-size: 2.25rem;
@@ -21,16 +39,34 @@
         letter-spacing: -0.04em;
         margin-top: 0.1rem;
         color: #fff;
+        @include max-lg {
+          font-size: 1.5rem;
+          line-height: 1.695rem;
+          letter-spacing: -0.04em;
+          margin-top: 0;
+        }
       }
       .button {
         margin-top: 0.4375rem;
         padding: 0.9375rem 2rem;
+        @include max-lg {
+          padding: 0.875rem 1.25rem;
+          font-weight: 600;
+          font-size: 0.875rem;
+          letter-spacing: -0.02em;
+          margin-top: 0;
+          width: fit-content;
+        }
       }
     }
     &-cards {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 0.8125rem;
+      @include max-lg {
+        grid-template-columns: 1fr;
+        gap: 0.65rem;
+      }
     }
     &-card {
       display: flex;
@@ -42,6 +78,11 @@
       border-radius: 0.75rem;
       height: 13.5rem;
       color: #fff;
+      @include max-lg {
+        height: auto;
+        padding: 1.25rem;
+        padding-bottom: 1.25rem;
+      }
       &-number {
         font-weight: 500;
         font-size: 1.25rem;
@@ -52,15 +93,25 @@
         width: 2.8125rem;
         height: 2.8125rem;
         background-color: #383838;
+        @include max-lg {
+          margin-bottom: 1.25rem;
+        }
       }
       &-title {
         font-weight: 700;
         font-size: 1.5rem;
+        @include max-lg {
+          font-size: 1.125rem;
+          margin-bottom: 0.625rem;
+        }
       }
       &-description {
         font-weight: 400;
         font-size: 1rem;
         color: #d9d9d9;
+        @include max-lg {
+          font-size: 0.875rem;
+        }
       }
     }
   }
@@ -75,13 +126,29 @@
     padding-bottom: 4.625rem;
     margin-right: -0.2rem;
     border-radius: 0.75rem;
+    width: 100%;
+    @include max-lg {
+      padding: 1.25rem;
+      padding-bottom: 1.25rem;
+      padding-top: 1.875rem;
+    }
     &-title {
       width: 23.1875rem;
+      @include max-lg {
+        width: 15rem;
+        margin-bottom: 1.875rem;
+      }
       h2 {
         font-weight: 500;
         font-size: 2.25rem;
         line-height: 2.4975rem;
         letter-spacing: -0.04em;
+        @include max-lg {
+          font-weight: 500;
+          font-size: 1.5rem;
+          line-height: 1.695rem;
+          letter-spacing: -0.04em;
+        }
       }
     }
     &-image {
@@ -90,25 +157,46 @@
       top: 0;
       right: 3.3125rem;
       line-height: 0;
+      @include max-lg {
+        z-index: 1;
+        display: none;
+      }
     }
     &-cards {
+      position: relative;
+      z-index: 2;
       display: grid;
       grid-template:
         "long blue"
         "long def";
       gap: 0.6rem;
       margin-left: -0.4rem;
+      @include max-lg {
+        margin-left: 0;
+        grid-template:
+          "long"
+          "blue"
+          "def";
+      }
     }
     &-card {
       &-title {
         font-weight: 700;
         font-size: 1.5rem;
         line-height: 1.875rem;
+        @include max-lg {
+          font-size: 1.125rem;
+          line-height: 1.44rem;
+        }
       }
       &-description {
         font-weight: 400;
         font-size: 1rem;
         line-height: 1.25rem;
+        @include max-lg {
+          font-size: 0.875rem;
+          line-height: 1.06rem;
+        }
       }
       &-long {
         grid-area: long;
@@ -120,6 +208,15 @@
         width: 19.4375rem;
         height: 21.125rem;
         background-color: #fff;
+        @include max-lg {
+          width: 11.5625rem;
+          height: auto;
+          .index-process__nalog-card-title {
+            margin-bottom: 1.6875rem;
+            font-size: 1.125rem;
+            line-height: 1.44rem;
+          }
+        }
       }
       &-blue {
         grid-area: blue;
@@ -132,6 +229,13 @@
         .index-process__nalog-card-title {
           margin-bottom: 0.8125rem;
           width: 14.4375rem;
+          @include max-lg {
+            margin-bottom: 0.95rem;
+          }
+        }
+        @include max-lg {
+          width: 100%;
+          height: auto;
         }
       }
       &-def {
@@ -141,16 +245,29 @@
         width: 27.0625rem;
         height: 7.625rem;
         background-color: #fff;
+        @include max-lg {
+          padding: 1.25rem;
+          width: 100%;
+          height: auto;
+        }
         &-title {
           font-weight: 500;
           font-size: 1rem;
           margin-bottom: 0.3125rem;
+          @include max-lg {
+            font-size: 0.875rem;
+          }
         }
         &-description {
           font-weight: 400;
           font-size: 1rem;
           line-height: 1.24rem;
           letter-spacing: -0.02em;
+          @include max-lg {
+            font-size: 0.875rem;
+            line-height: 1.1rem;
+            letter-spacing: -0.02em;
+          }
         }
       }
     }

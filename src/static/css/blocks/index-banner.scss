@@ -1,21 +1,38 @@
+@import "../service/media-mixin.scss";
+
 .index-banner {
+  position: relative;
   height: 55.125rem;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   border-bottom: 1px solid #00000013;
+  @include max-lg {
+    height: 43rem;
+    border-bottom: unset;
+  }
   &__content {
     margin-bottom: 2.5rem;
+    @include max-lg {
+      margin-bottom: 0;
+      width: 100%;
+    }
   }
   &__title {
     width: 53.125rem;
     margin-bottom: 2.125rem;
-
+    @include max-lg {
+      width: 87%;
+      margin-bottom: 11.375rem;
+    }
     h1 {
       font-weight: 700;
       font-size: 3.375rem;
       line-height: 4.01625rem;
-      color: #383838;
+      @include max-lg {
+        font-size: 1.875rem;
+        line-height: 2.11875rem;
+      }
     }
   }
   &__buttons {
@@ -24,15 +41,24 @@
     .button {
       padding: 1.25rem 2.875rem;
     }
+    @include max-lg {
+      gap: 0.75rem;
+      flex-direction: column;
+    }
   }
   &__cards {
     display: flex;
     gap: 0.5625rem;
     margin-top: 10.8rem;
+    @include max-lg {
+      gap: 0.375rem;
+      margin-top: 1.25rem;
+    }
   }
   &__card {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 0.9375rem;
     padding: 1.25rem 1.3125rem;
     padding-bottom: 0.875rem;
@@ -40,14 +66,37 @@
     background-color: #f4f8ff;
     color: #383838;
     width: 12.8125rem;
+    @include max-lg {
+      width: auto;
+      flex: 1;
+      padding: 0.8125rem;
+      padding-bottom: 0.625rem;
+    }
+    &-1 {
+      width: 5.4375rem;
+    }
+    &-2 {
+      width: 6.25rem;
+    }
+    &-3 {
+      width: 9.625rem;
+    }
     &--large {
       width: 17.375rem;
+      @include max-lg {
+        width: 9.625rem;
+      }
     }
     &-text {
       font-weight: 400;
       font-size: 1rem;
       line-height: 1.38rem;
       margin-left: -0.4rem;
+      @include max-lg {
+        font-weight: 400;
+        font-size: 0.875rem;
+        line-height: 0.9975rem;
+      }
     }
     &-value {
       font-weight: 700;
@@ -55,6 +104,11 @@
       letter-spacing: -0.04em;
       align-self: flex-end;
       margin-right: 0.6rem;
+      @include max-lg {
+        font-weight: 700;
+        font-size: 1.5625rem;
+        margin-right: 0;
+      }
     }
   }
 
@@ -64,5 +118,12 @@
     line-height: 0;
     flex-shrink: 0;
     transform: translate(-6.3rem, 0);
+    @include max-lg {
+      position: absolute;
+      top: 11.5625rem;
+      right: -1.25rem;
+      width: 20.8125rem;
+      height: 14.375rem;
+    }
   }
 }

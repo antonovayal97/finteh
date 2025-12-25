@@ -9,7 +9,7 @@
 html {
   font-size: calc(16 * 100vw / 1920);
   @include max-lg {
-    font-size: calc(16 * 100vw / 375);
+    font-size: calc(16 * 100vw / 393);
   }
 }
 
@@ -31,7 +31,7 @@ body {
   max-width: 107.25rem;
   margin: 0 auto;
   @include max-lg {
-    max-width: 21.4375rem;
+    max-width: 22.0625rem;
   }
 }
 
@@ -74,6 +74,7 @@ body {
 }
 
 .button {
+  display: block;
   padding: 0.9375rem 2.5rem;
   border-radius: 0.75rem;
   font-weight: 600;
@@ -82,6 +83,7 @@ body {
   color: #fff;
   background-color: #1cb4ff;
   outline: unset;
+  text-align: center;
   &--large {
     padding: 1.25rem 2.875rem;
     font-weight: 500;
