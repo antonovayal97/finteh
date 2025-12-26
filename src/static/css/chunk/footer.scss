@@ -113,7 +113,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 3.125rem;
+      margin-bottom: 2.9rem;
     }
     &-logo {
       width: 7.5rem;
@@ -121,17 +121,85 @@
     &-phone {
       font-weight: 400;
       font-size: 1.375rem;
+      line-height: 1.3rem;
       letter-spacing: -0.04em;
       text-transform: uppercase;
       color: #fff;
     }
     &-menus {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 3.1rem;
+    }
+    &-menu {
+      &-title {
+        font-weight: 500;
+        font-size: 0.875rem;
+        letter-spacing: -0.02em;
+        color: #fff;
+        opacity: 0.5;
+        margin-bottom: 0.9375rem;
+      }
+      &-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.9375rem;
+        li {
+          font-weight: 500;
+          font-size: 0.875rem;
+          letter-spacing: -0.02em;
+          color: #fff;
+        }
+      }
     }
     &-email {
+      display: block;
+      font-weight: 400;
+      font-size: 1.375rem;
+      letter-spacing: -0.04em;
+      text-transform: uppercase;
+      color: #fff;
+      margin-bottom: 2.5rem;
     }
     &-copy-n-pr {
+      display: flex;
+      justify-content: space-between;
+    }
+    &-copy {
+      font-family: "Golos Text", sans-serif;
+      font-weight: 400;
+      font-size: 0.75rem;
+      letter-spacing: 0.03em;
+      color: #878888;
+      &-1 {
+        margin-bottom: 0.3125rem;
+      }
+      &-2 {
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+      }
+    }
+    &-pr {
+      font-weight: 400;
+      font-size: 0.75rem;
+      color: #878888;
+      margin-bottom: 1.25rem;
+      &-1 {
+        margin-bottom: 0.3125rem;
+      }
+      &-2 {
+        line-height: 0.8rem;
+        text-transform: uppercase;
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+        color: #fff;
+      }
     }
     &-info {
+      font-weight: 400;
+      font-size: 0.75rem;
+      line-height: 0.9rem;
+      color: #878888;
     }
   }
 }

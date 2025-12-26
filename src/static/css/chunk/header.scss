@@ -71,11 +71,96 @@
     z-index: 99;
     width: 100vw;
     padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
+    padding-bottom: 1.1rem;
     border-bottom: 1px solid #0000001c;
     background-color: #fff;
     @include max-lg {
       display: block;
+    }
+    &--active {
+      .header-mobile__button {
+        display: none;
+      }
+      .burger {
+        display: none;
+      }
+      .burger-close {
+        display: block;
+      }
+      .header-mobile__menu {
+        display: flex;
+      }
+    }
+    &__menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 4.8rem;
+      width: 100%;
+      background-color: #fff;
+      height: calc(100vh - 4.8rem);
+      padding-top: 3.18rem;
+      padding-bottom: 1.875rem;
+      .c-container {
+        height: 100%;
+        width: 100%;
+      }
+      &-wrap {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+      &-menus {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: auto;
+      }
+      &-menu {
+        &-title {
+          font-weight: 500;
+          font-size: 0.875rem;
+          letter-spacing: -0.02em;
+          color: #383838;
+          opacity: 0.5;
+          margin-bottom: 0.9375rem;
+        }
+        &-list {
+          display: flex;
+          flex-direction: column;
+          gap: 0.9375rem;
+          font-weight: 500;
+          font-size: 0.875rem;
+          letter-spacing: -0.02em;
+          color: #383838;
+        }
+      }
+      &-contacts {
+        padding-top: 1.875rem;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+        margin: 0 -1.25rem;
+        margin-bottom: 1.875rem;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        gap: 0.9375rem;
+        a {
+          font-weight: 400;
+          font-size: 1.375rem;
+          letter-spacing: -0.04em;
+          text-transform: uppercase;
+          color: #000;
+        }
+      }
+      &-button {
+        .button {
+          padding: 0.9375rem 2.5rem;
+          font-weight: 500;
+          font-size: 0.875rem;
+          letter-spacing: -0.02em;
+          color: #fff;
+        }
+      }
     }
     &__block {
       display: flex;
@@ -88,6 +173,7 @@
     }
     &__logo {
       width: 6.8125rem;
+      margin-top: 0.2rem;
     }
     &__button {
       .button {
@@ -99,13 +185,23 @@
     }
     &__burger {
       button {
-        padding: 0.875rem 0.75rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2.3125rem;
+        height: 2.3125rem;
         border-radius: 0.75rem;
         line-height: 0;
         background-color: #1cb4ff;
-        .icon {
+        color: #fff;
+        .burger {
           width: 0.8125rem;
           height: 0.5625rem;
+        }
+        .burger-close {
+          display: none;
+          width: 0.716875rem;
+          height: 0.716875rem;
         }
       }
     }

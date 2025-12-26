@@ -2,6 +2,9 @@
 
 .index-news {
   margin-bottom: 6.5625rem;
+  @include max-lg {
+    margin-bottom: 3.75rem;
+  }
   &__title {
     margin-bottom: 1.875rem;
     margin-left: -0.3rem;
