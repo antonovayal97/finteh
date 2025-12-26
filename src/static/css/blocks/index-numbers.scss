@@ -46,10 +46,24 @@
       height: auto;
     }
     &-value {
-      line-height: 0;
-      margin-bottom: 0.0625rem;
+      margin-bottom: 1.5rem;
+      font-size: 8rem;
+      line-height: 8rem;
+      margin-top: -1.4rem;
+      letter-spacing: -0.05em;
+      font-weight: 700;
+      margin-left: -0.5rem;
+      .c-accient {
+        margin-left: 0.5rem;
+      }
       @include max-lg {
-        margin-bottom: -0.1rem;
+        margin-bottom: 0.55rem;
+        font-size: 3rem;
+        line-height: 3rem;
+        margin-top: -0.5rem;
+        letter-spacing: -0.05em;
+        font-weight: 700;
+        margin-left: 0rem;
       }
     }
     &-title {
@@ -77,9 +91,6 @@
       width: 26.1875rem;
       @include max-lg {
         width: calc(50% - 0.75rem / 2);
-        .index-numbers__card-value {
-          width: 64%;
-        }
         .index-numbers__card-title {
           margin-bottom: 0.3rem;
         }
@@ -92,10 +103,6 @@
       width: 21.0625rem;
       @include max-lg {
         width: calc(50% - 0.75rem / 2);
-        .index-numbers__card-value {
-          width: 76%;
-          margin-bottom: 0.1rem;
-        }
         .index-numbers__card-title {
           margin-bottom: -0.1rem;
         }
@@ -108,18 +115,12 @@
       width: 20rem;
       @include max-lg {
         width: calc(50% - 0.75rem / 2);
-        .index-numbers__card-value {
-          width: 73%;
-        }
       }
     }
     &--4 {
       width: 25rem;
       @include max-lg {
         width: calc(50% - 0.75rem / 2);
-        .index-numbers__card-value {
-          width: 39%;
-        }
         .index-numbers__card-title {
           margin-bottom: 0.3rem;
         }

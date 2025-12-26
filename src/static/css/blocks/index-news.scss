@@ -131,12 +131,27 @@
       }
     }
     &-date {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       font-weight: 400;
       font-size: 1rem;
       line-height: 1.5rem;
       letter-spacing: -0.02em;
-      opacity: 0.5;
       margin-left: 0.3rem;
+      span {
+        opacity: 0.5;
+      }
+      .icon {
+        display: none;
+        color: #1cb4ff;
+        @include max-lg {
+          display: block;
+          width: 1.25rem;
+          height: 1.25rem;
+          margin-right: -0.4rem;
+        }
+      }
       @include max-lg {
         margin-left: 0;
         font-size: 0.875rem;

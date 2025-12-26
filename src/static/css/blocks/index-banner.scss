@@ -78,6 +78,7 @@
     background-color: #f4f8ff;
     color: #383838;
     width: 12.8125rem;
+    height: 8.0625rem;
     @include max-lg {
       width: auto;
       height: 7.1875rem;
@@ -85,13 +86,22 @@
       padding-bottom: 0.625rem;
     }
     &-1 {
-      width: 5.4375rem;
+      width: 13rem;
+      @include max-lg {
+        width: 5.4375rem;
+      }
     }
     &-2 {
-      width: 6.25rem;
+      width: 13rem;
+      @include max-lg {
+        width: 6.25rem;
+      }
     }
     &-3 {
       width: 9.625rem;
+      @include max-lg {
+        width: 9.625rem;
+      }
     }
     &--large {
       width: 17.375rem;
